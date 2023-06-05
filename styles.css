@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    font-family: 'Saira', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.topbar{
+    background-color: #f5f5f5;
+    display: none;
+    padding: 10px 60px;
+}
+
+.welcome-message{
+    font-size: 16px;
+    font-weight: 500;
+    color: #696969;
+}
+
+.visitor-count{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: auto;
+    max-width: 100%;
+    width: 80px;
+}
+
+.navbar-container{
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 99;
+    padding: 0px 30px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container>nav{
+    display: none;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-list-container{
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}
+
+.navbar-list-item>a{
+    font-weight: 500;
+    display: flex;
+    padding-block: 30px;
+    display: flex;
+    align-items: center;
+    color: #1f2230;
+    transition: 0.4s;
+}
+
+.navbar-list-item>a:hover{
+    color: #32c36c;
+}
+
+.home{
+    color: #32c36c;
+}
+
+.username-link{
+    background-color: #32c36c;
+    padding-block: .5rem;
+    padding-inline: .75rem;
+}
+
+@media (width >= 1200px) {
+    .topbar{
+        padding: 10px 30px;
+    }
+}
+
+/* Tablet view upwards */
+@media (width >= 991px){
+    .topbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-container{
+        padding: 0px 60px 0px 0px;
+        top: unset;
+    }
+
+    .navbar-container>nav{
+        display: block;
+    }
+
+    .material-symbols-outlined.hamburger-menu{
+        display: none;
+    }
+}
