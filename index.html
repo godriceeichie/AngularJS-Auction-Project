@@ -7,8 +7,8 @@
     <title>Document</title>
     <script src="node_modules\angular\angular.js "></script>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="topbar">
@@ -39,9 +39,21 @@
         </span>
 
         <a href="" class="username-link">Enter username</a>
-        <div ng-include="'hamburger.html'" class="{{hamburgerClass}}"  ></div>
     </header>
-    <div ng-include="'hero.html'"></div>
-    <!-- <script src="carousel.js" type="module"></script> -->
+    <main>
+        <div class="hero-container">
+            <div class="hero">
+               <div id="hero-main-text">
+                    <div class="hero-main-text">
+                        <span class="auction-welcome-text">Welcome To Auction House</span>
+                        <h1>Build, sell and collect items</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consequatur rem vitae a explicabo officia tempore officiis? Nemo, facere fuga.</p>
+                    </div>
+                    <a href="" class="hero-cta">start exploring</a>
+               </div>
+               <img src="images/Auction-bro.png" alt="">
+            </div>
+        </div>
+    </main>
 </body>
 </html>
