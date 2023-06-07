@@ -1,31 +1,6 @@
-// // import Swiper from 'swiper'
-// // import 'swiper/css'
-
-// const swiper = new Swiper('.swiper', {
-//     // Optional parameters
-//     autoplay:{
-//         delay: 2000
-//     },
-
-//     direction: 'horizontal',
-
-//     loop: true,
-
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-
-//     effect: 'fade',
-  
-//     fadeEffect:{
-//         crossFade: true
-//     }
-// });
-
 const swiper = new Swiper('.swiper', {
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     loop: true,
@@ -35,11 +10,31 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-pagination',
       clickable: true,
     },
+    slidesPerView: 5,
   
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+
+    spaceBetween: 10,
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 15
+      },
+      1100: {
+        slidesPerView: 5,
+        spaceBetween: 10
+      }
     },
 
     transition: {
@@ -50,8 +45,12 @@ const swiper = new Swiper('.swiper', {
 
     scrollbar: {
       el: '.swiper-scollbar',
-      hide: true,
+      hide: true
     },
+    on: {
+      
+    }
   });
 
+  swiper.autoplay.start()
     

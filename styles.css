@@ -93,7 +93,7 @@ a{
 }
 
 .home{
-    color: #32c36c;
+    color: #32c36c !important;
 }
 
 .username-link{
@@ -151,7 +151,8 @@ a{
 }
 
 .hero-container{
-    padding-block: 6rem;
+    /* padding-block: min(20vw, 1rem); */
+    padding-block: 3rem;
 }
 
 .hero{
@@ -160,18 +161,25 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    
+    padding-inline: 2rem;
+}
+
+#hero-main-text{
+    flex: 1;
     gap: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-main-text{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     gap: 20px;
     text-align: center;
-    padding-inline: 2rem;
+    /* padding-inline: 2rem; */
 }
 
 .hero-main-text>span{
@@ -195,7 +203,7 @@ a{
 }
 
 .hero-cta{
-    text-align: center;
+    /* text-align: center; */
     border-radius: 100px;
     display: inline-block;
     transition: all 0.4s ease;
@@ -245,6 +253,27 @@ a{
     transform: rotateY(90deg);
 }
 
+.hero-main-img{
+    display: none;
+    width: 400px;
+    flex: 1;
+}
+
+.swiper{
+    margin-top: 2.5rem;
+}
+
+.swiper-slide{
+    /* padding: 2rem; */
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+    transition: transform .5s ease;
+}
+
+.swiper-slide:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0.25rem 0.5rem 0 rgb(0 0 0 / 12%), 0 0.125rem 0.25rem 0 rgb(0 0 0 / 8%);
+}
 
 @media (width >= 1200px) {
     .topbar{
@@ -290,7 +319,34 @@ a{
 }
 
 @media (width >= 1100px){
+
+    .hero-container{
+        padding-block: unset;
+    }
+
+    .hero{
+        flex-direction: row;
+        justify-content: unset;
+        align-items: center;
+    }
     #hero-main-text{
-        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-main-text{
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+        justify-content: start;
+        gap: 20px;
+        text-align: unset;
+        /* padding-inline: 2rem; */
+    }
+    
+
+    .hero-main-img{
+        display: inline-block;
     }
 }

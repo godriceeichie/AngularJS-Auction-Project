@@ -22,16 +22,20 @@ angularModule.controller('NavbarController', ['$scope', function($scope){
 
     $scope.navLinks = [
         {
-            name: 'Home'
+            name: 'Home',
+            style: 'home'
         },
         {
-            name: 'Gallery'
+            name: 'Gallery',
+            style: ''
         },
         {
-            name: 'About Us'
+            name: 'About Us',
+            style: ''
         },
         {
-            name: 'Contact Us'
+            name: 'Contact Us',
+            style: ''
         }
     ]
 }])
