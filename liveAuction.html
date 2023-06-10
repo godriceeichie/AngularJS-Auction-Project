@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="live-auction-header">
+        <h2>Live Auction</h2>
+        <p>Explore on the world's best & largest Bidding marketplace with our beautiful Bidding products.
+            We want to be a part of your smile, success and future growth.
+        </p>
+    </header>
+    <div class="live-auction-products-grid">
+        <div class="live-auction-card" ng-repeat="card in liveAuctionCard">
+            <div class="product-img-container">
+                <img class="product-img" ng-src="{{card.imgPath}}" alt="">
+                <div class="auction-timer">
+                    <div class="auction-time">
+                        <div class="auction-time-countdown">
+                            <span class="countdown_row">
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">{{card.days}}</span>
+                                    <br>
+                                    Days
+                                </span>
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">{{card.hours}}</span>
+                                    <br>
+                                    Hours
+                                </span>
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">{{card.minutes}}</span>
+                                    <br>
+                                    Minutes
+                                </span>
+                                <span class="countdown-section">
+                                    <span class="countdown-amount">{{card.seconds}}</span>
+                                    <br>
+                                    Seconds
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="author-area">
+                    <div class="author-emo">
+                        <img src="./images/author-img.jpeg" alt="">
+                    </div>
+                    <div class="author-name">
+                        <span>Renly Lab</span>
+                    </div>
+                </div>
+            </div>
+            <div class="live-auction-product-content">
+                <h4>
+                    <a href="">{{card.name}}</a>
+                </h4>
+                <p>Current bid: <span>{{card.currentBid}}</span></p>
+                <div class="live-auction-card-bttm">
+                    <a href="" class="live-auction-cta">Place a bid</a>
+                    <div class="share-area">
+                        <ul class="social-icons">
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" style="" fill="#010002" data-original="#010002" class=""></path></g></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M89.9 25.2c-3 1.3-6.1 2.2-9.4 2.6 3.4-2 6-5.2 7.2-9.1-3.2 1.9-6.7 3.2-10.4 4-3-3.2-7.3-5.2-12-5.2-9.1 0-16.4 7.4-16.4 16.4 0 1.3.1 2.5.4 3.7-13.6-.6-25.6-7.2-33.7-17.1-5.8 10.4.7 19 5 21.9-2.6 0-5.2-.8-7.4-2 0 8.1 5.7 14.8 13.1 16.3-1.6.5-5.2.8-7.4.3 2.1 6.5 8.2 11.3 15.3 11.4-5.6 4.4-13.8 7.9-24.3 6.8 7.3 4.7 15.9 7.4 25.2 7.4 30.2 0 46.6-25 46.6-46.6 0-.7 0-1.4-.1-2.1 3.4-2.5 6.2-5.4 8.3-8.7z" fill="#000000" data-original="#000000" class=""></path></g></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths"><g><path d="M373.406 0H138.594C62.172 0 0 62.172 0 138.594V373.41C0 449.828 62.172 512 138.594 512H373.41C449.828 512 512 449.828 512 373.41V138.594C512 62.172 449.828 0 373.406 0zm108.578 373.41c0 59.867-48.707 108.574-108.578 108.574H138.594c-59.871 0-108.578-48.707-108.578-108.574V138.594c0-59.871 48.707-108.578 108.578-108.578H373.41c59.867 0 108.574 48.707 108.574 108.578zm0 0" fill="#000000" data-original="#000000" class="hovered-path"></path><path d="M256 116.004c-77.195 0-139.996 62.8-139.996 139.996S178.804 395.996 256 395.996 395.996 333.196 395.996 256 333.196 116.004 256 116.004zm0 249.976c-60.64 0-109.98-49.335-109.98-109.98 0-60.64 49.34-109.98 109.98-109.98 60.645 0 109.98 49.34 109.98 109.98 0 60.645-49.335 109.98-109.98 109.98zM399.344 66.285c-22.813 0-41.367 18.559-41.367 41.367 0 22.813 18.554 41.371 41.367 41.371s41.37-18.558 41.37-41.37-18.558-41.368-41.37-41.368zm0 52.719c-6.258 0-11.352-5.094-11.352-11.352 0-6.261 5.094-11.351 11.352-11.351 6.261 0 11.355 5.09 11.355 11.351 0 6.258-5.094 11.352-11.355 11.352zm0 0" fill="#000000" data-original="#000000" class="hovered-path"></path></g></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 579.148 579.148" style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths"><g><path d="M434.924 38.847C390.561 12.954 342.107.01 289.574.01c-52.54 0-100.992 12.944-145.356 38.837C99.854 64.741 64.725 99.87 38.837 144.228 12.944 188.597 0 237.049 0 289.584c0 58.568 15.955 111.732 47.883 159.486 31.922 47.768 73.771 83.08 125.558 105.949-1.01-26.896.625-49.137 4.902-66.732l37.326-157.607c-6.285-12.314-9.425-27.645-9.425-45.999 0-21.365 5.404-39.217 16.212-53.538 10.802-14.333 24.003-21.5 39.59-21.5 12.564 0 22.246 4.143 29.034 12.448 6.787 8.292 10.184 18.727 10.184 31.292 0 7.797-1.451 17.289-4.334 28.47-2.895 11.187-6.665 24.13-11.31 38.837-4.651 14.701-7.98 26.451-9.994 35.252-3.525 15.33-.63 28.463 8.672 39.4 9.295 10.936 21.616 16.4 36.952 16.4 26.898 0 48.955-14.951 66.176-44.865 17.217-29.914 25.826-66.236 25.826-108.973 0-32.925-10.617-59.701-31.859-80.312-21.242-20.606-50.846-30.918-88.795-30.918-42.486 0-76.862 13.642-103.123 40.906-26.267 27.277-39.401 59.896-39.401 97.84 0 22.625 6.414 41.609 19.229 56.941 4.272 5.029 5.655 10.428 4.149 16.205-.508 1.512-1.511 5.281-3.017 11.309-1.505 6.029-2.515 9.934-3.017 11.689-2.014 8.049-6.787 10.564-14.333 7.541-19.357-8.043-34.064-21.99-44.113-41.85-10.055-19.854-15.08-42.852-15.08-68.996 0-16.842 2.699-33.685 8.103-50.527s13.819-33.115 25.264-48.832c11.432-15.698 25.135-29.596 41.102-41.659 15.961-12.069 35.38-21.738 58.256-29.04 22.871-7.283 47.51-10.93 73.904-10.93 35.693 0 67.744 7.919 96.146 23.751 28.402 15.839 50.086 36.329 65.043 61.463 14.951 25.135 22.436 52.026 22.436 80.692 0 37.705-6.541 71.641-19.607 101.807-13.072 30.166-31.549 53.855-55.43 71.072-23.887 17.215-51.035 25.826-81.445 25.826-15.336 0-29.664-3.58-42.986-10.748-13.33-7.166-22.503-15.648-27.528-25.453-11.31 44.486-18.097 71.018-20.361 79.555-4.78 17.852-14.584 38.457-29.413 61.836 26.897 8.043 54.296 12.062 82.198 12.062 52.534 0 100.987-12.943 145.35-38.83 44.363-25.895 79.492-61.023 105.387-105.393 25.887-44.365 38.838-92.811 38.838-145.352 0-52.54-12.951-100.985-38.838-145.355-25.889-44.334-61.024-79.463-105.387-105.357z" fill="#000000" data-original="#000000" class="hovered-path"></path></g></svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="share-btn">
+                            <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="15" height="15" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M406 332c-29.641 0-55.761 14.581-72.167 36.755L191.99 296.124c2.355-8.027 4.01-16.346 4.01-25.124 0-11.906-2.441-23.225-6.658-33.636l148.445-89.328C354.307 167.424 378.589 180 406 180c49.629 0 90-40.371 90-90S455.629 0 406 0s-90 40.371-90 90c0 11.437 2.355 22.286 6.262 32.358l-148.887 89.59C156.869 193.136 132.937 181 106 181c-49.629 0-90 40.371-90 90s40.371 90 90 90c30.13 0 56.691-15.009 73.035-37.806l141.376 72.395C317.807 403.995 316 412.75 316 422c0 49.629 40.371 90 90 90s90-40.371 90-90-40.371-90-90-90z" fill="#000000" data-original="#000000" class=""></path></g></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

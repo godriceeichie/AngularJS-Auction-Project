@@ -13,7 +13,6 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <script src="app.js"></script>
     
     
 </head>
@@ -49,7 +48,7 @@
         <div ng-include="'hamburger.html'" class="{{hamburgerClass}}"></div>
     </header>
     <main>
-        <div class="hero-container" ng-include="'hero.html'"></div>
+        <section class="hero-container" ng-include="'hero.html'"></section>
         <div class="swiper" style="width: 80%;">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -142,7 +141,8 @@
             <!-- If we need scrollbar -->
             <!-- <div class="swiper-scrollbar"></div> -->
         </div>
-        <p>red</p>
+        <section ng-include="'liveAuction.html'" ng-controller="CountdownController" class="live-auction-section"></section>
+        <p>Red</p>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="carousel.js"></script>
