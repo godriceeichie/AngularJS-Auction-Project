@@ -538,10 +538,185 @@ h6{
 
 }
 
-@media (width >= 1200px) {
-    .topbar{
-        padding: 10px 30px;
-    }
+.view-more-container{
+    display: flex;
+    justify-content: center;
+}
+
+.live-auction-cta.view-more{
+    margin-top: 2.5rem;
+    border-radius: 5px;
+    margin-inline: auto;
+    padding: 14px 45px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.live-auction-cta.view-more::before,
+.live-auction-cta.view-more::after
+{
+    border-radius: 5px;
+}
+
+.cta-section{
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.cta-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+}
+
+.product-banner{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.product-banner-item {
+    padding: 25px;
+    position: relative;
+    width: 100%;
+    max-width: 670px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 385px;
+    overflow: hidden;
+    z-index: 1;
+    flex-wrap: wrap-reverse;
+}
+
+.product-banner-item.upcoming-banner{
+    background-color: #E3FFE0;
+}
+
+.product-banner-item.best-selling-banner{
+    background-color: rgba(253, 104, 195, 0.4);
+}
+
+.product-banner-item .product-banner-content {
+    width: 100%;
+    max-width: 340px;
+}
+
+.product-banner-item .product-banner-content > span {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #696969;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.product-banner-item .product-banner-content > span::after {
+    content: "";
+    position: absolute;
+    width: 74px;
+    height: 1px;
+    background: #32c36c;
+    opacity: 0.8;
+    right: -80px;
+    top: 15px;
+}
+
+.product-banner-item .product-banner-content h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    color: #1F2230;
+    margin-bottom: 15px;
+}
+
+.product-banner-item .product-banner-content .countdown-timer ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.product-banner-item .product-banner-content .countdown-timer ul li {
+    padding: 3px 12px;
+    border-radius: 4px;
+    background-color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #1F2230;
+}
+
+.product-banner-item .product-banner-content .countdown-timer ul li span{
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    line-height: 19px;
+    color: #696969;
+    width: 100%;
+}
+
+.product-banner-item .product-banner-content .bid-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: #1F2230;
+    border-radius: 4px;
+    display: inline-flex;
+    padding: 8px 30px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.product-banner-item .product-banner-content .bid-btn:hover {
+    color: #fff;
+    background-color: #32c36c;
+}
+
+.product-banner .upcoming-banner:after {
+    position: absolute;
+    content: url(images/cta-bg-img.png);
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.product-banner .best-selling-banner:after {
+    position: absolute;
+    content: url(images/cta-purple-bg-img.png);
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.product-banner-item .product-banner-content .price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #1F2230;
+    margin-bottom: 35px;
+}
+
+.product-banner-item .product-banner-content .price > span {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #1F2230;
 }
 
 @media (width >= 767px) {
@@ -552,6 +727,15 @@ h6{
     .hero-main-text>h1{
         font-size: 17px 32px;
     }
+
+    .cta-section{
+        margin-top: 100px;
+    }
+
+    .product-banner-item {
+        flex-wrap: unset;
+    }
+    
 }
 
 /* Tablet view upwards */
@@ -608,6 +792,12 @@ h6{
         gap: 1rem;
     }
 
+    .cta-container{
+        /* display: grid; */
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 40px; */
+    }
+
 }
 
 @media (width >= 1100px){
@@ -652,4 +842,15 @@ h6{
     }
 
    
+}
+
+@media (width >= 1200px) {
+    .topbar{
+        padding: 10px 30px;
+    }
+
+    .product-banner-item{
+        padding: 10px 20px 10px 50px;
+    }
+    
 }

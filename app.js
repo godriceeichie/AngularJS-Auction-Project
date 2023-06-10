@@ -47,26 +47,26 @@ angularModule.controller('NavbarController', ['$scope', function($scope){
 angularModule.controller('CountdownController', ['$scope', '$interval', function($scope, $interval){
 
    
-    // $scope.countDownDate = new Date("Oct 16, 2023 00:00:00").getTime();
-    // $scope.days
-    // $scope.hours
-    // $scope.minutes
-    // $scope.seconds
+    $scope.countDownDate = new Date("Feb 16, 2024 00:00:00").getTime();
+    $scope.days
+    $scope.hours
+    $scope.minutes
+    $scope.seconds
 
-    // $scope.getTimeInterval = function(){
-    //     $scope.now = new Date().getTime();
-    //     $scope.distance = $scope.countDownDate - $scope.now;
+    $scope.getTimeInterval = function(){
+        $scope.now = new Date().getTime();
+        $scope.distance = $scope.countDownDate - $scope.now;
 
-    //     $scope.days = Math.floor($scope.distance / (1000 * 60 * 60 * 24));
-    //     $scope.hours = Math.floor(($scope.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //     $scope.minutes = Math.floor(($scope.distance % (1000 * 60 * 60)) / (1000 * 60));
-    //     $scope.seconds = Math.floor(($scope.distance % (1000 * 60)) / 1000);
+        $scope.days = Math.floor($scope.distance / (1000 * 60 * 60 * 24));
+        $scope.hours = Math.floor(($scope.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        $scope.minutes = Math.floor(($scope.distance % (1000 * 60 * 60)) / (1000 * 60));
+        $scope.seconds = Math.floor(($scope.distance % (1000 * 60)) / 1000);
         
-    // }; 
+    }; 
 
 
 
-    // $interval($scope.getTimeInterval, 1000)
+    $interval($scope.getTimeInterval, 1000)
       
     $scope.liveAuctionCard = [
         {
