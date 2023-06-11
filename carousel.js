@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const heroSwiper = new Swiper('.hero-swiper', {
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
@@ -52,5 +52,30 @@ const swiper = new Swiper('.swiper', {
     }
   });
 
-  swiper.autoplay.start()
-    
+heroSwiper.autoplay.start()
+
+const upcomingAuctionSwiper = new Swiper('.upcoming-auction-swiper', {
+  // Optional parameters
+  loop: true,
+
+  spaceBetween: 24,
+
+  slidesPerView: 3,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    hide: true
+  },
+});

@@ -274,18 +274,18 @@ h6{
     flex: 1;
 }
 
-.swiper{
+.swiper.hero-swiper{
     margin-top: 2.5rem;
 }
 
-.swiper-slide{
+.hero-swiper .swiper-slide{
     /* padding: 2rem; */
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
     transition: transform .5s ease;
 }
 
-.swiper-slide:hover{
+.hero-swiper .swiper-slide:hover{
     transform: scale(1.1);
     box-shadow: 0 0.25rem 0.5rem 0 rgb(0 0 0 / 12%), 0 0.125rem 0.25rem 0 rgb(0 0 0 / 8%);
 }
@@ -324,7 +324,7 @@ h6{
     gap: 1.5rem;
 }
 
-.live-auction-products-grid .live-auction-card{
+.live-auction-products-grid .live-auction-card, .upcoming-auction-card{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -345,13 +345,13 @@ h6{
     overflow: hidden;
 }
 
-.live-auction-products-grid .product-img{
+.product-img{
     width: 100%;
     border-radius: 5px 5px 0px 0px;
     transition: all 0.65s ease;
 }
 
-.live-auction-products-grid .product-img:hover{
+.product-img:hover{
     transform: scale(1.2);
 }
 
@@ -383,7 +383,7 @@ h6{
     /* gap: 1rem; */
 }
 
-.live-auction-products-grid .countdown_section{
+.live-auction-products-grid .countdown-section{
     display: block;
     float: left;
     font-size: 75%;
@@ -454,14 +454,15 @@ h6{
     color: #fff;
 }
 
-.live-auction-products-grid .live-auction-product-content{
+.live-auction-products-grid .live-auction-product-content, .upcoming-auction-product-content{
     padding: 30px 25px;
 }
 
-.live-auction-products-grid .live-auction-product-content h4{
+.live-auction-product-content h4{
     font-size: calc(1.275rem + .3vw);
     font-weight: 500;
 }
+
 
 .live-auction-products-grid .live-auction-product-content p{
     font-size: 16px;
@@ -475,7 +476,16 @@ h6{
     color: #1f2230;
 }
 
-.live-auction-products-grid .live-auction-card .live-auction-card-bttm{
+/* .live-auction-products-grid .live-auction-card .live-auction-card-bttm{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 25px;
+} */
+
+.live-auction-card-bttm{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -484,18 +494,37 @@ h6{
     margin-top: 25px;
 }
 
-.live-auction-products-grid .live-auction-card .live-auction-card-bttm .live-auction-cta{
+/* .live-auction-products-grid .live-auction-card .live-auction-card-bttm .live-auction-cta{
+    padding: 6px 15px;
+    border-radius: 5px;
+    text-transform: capitalize;
+} */
+.live-auction-card-bttm .live-auction-cta{
     padding: 6px 15px;
     border-radius: 5px;
     text-transform: capitalize;
 }
 
-.live-auction-products-grid .live-auction-card .live-auction-card-bttm .live-auction-cta::before,
+/* .live-auction-products-grid .live-auction-card .live-auction-card-bttm .live-auction-cta::before,
 .live-auction-products-grid .live-auction-card .live-auction-card-bttm .live-auction-cta::after{
+    border-radius: 5px;
+} */
+
+.live-auction-card-bttm .live-auction-cta::before,
+.live-auction-card-bttm .live-auction-cta::after{
     border-radius: 5px;
 }
 
-.live-auction-products-grid .live-auction-card .live-auction-card-bttm .share-area{
+/* .live-auction-products-grid .live-auction-card .live-auction-card-bttm .share-area{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    align-items: center;
+} */
+
+.live-auction-card-bttm .share-area{
     position: absolute;
     right: 0;
     display: flex;
@@ -504,10 +533,15 @@ h6{
     align-items: center;
 }
 
-.live-auction-products-grid .live-auction-card .live-auction-card-bttm .share-area:hover .social-icons{
+
+/* .live-auction-products-grid .live-auction-card .live-auction-card-bttm .share-area:hover .social-icons{
+    transform: scaleX(1);
+} */
+
+.live-auction-card-bttm .share-area:hover .social-icons{
     transform: scaleX(1);
 }
-
+/* 
 .live-auction-products-grid .live-auction-card .live-auction-card-bttm .social-icons{
     padding: 5px;
     margin-right: 0px;
@@ -517,13 +551,43 @@ h6{
     z-index: 1;
     margin-bottom: 0px;
     display: flex;
-}
+} */
 
+.live-auction-card-bttm .social-icons{
+    padding: 5px;
+    margin-right: 0px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: 0.5s ease;
+    z-index: 1;
+    margin-bottom: 0px;
+    display: flex;
+}
+/* 
 .live-auction-products-grid .live-auction-card .live-auction-card-bttm .social-icons li{
+    margin-right: 8px;
+} */
+
+.live-auction-card-bttm .social-icons li{
     margin-right: 8px;
 }
 
-.live-auction-products-grid .live-auction-card .live-auction-card-bttm .share-btn{
+/* .live-auction-products-grid .live-auction-card .live-auction-card-bttm .share-btn{
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    text-align: center;
+    transition: 0.5s ease;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+.live-auction-card-bttm .share-btn{
     height: 34px;
     width: 34px;
     line-height: 34px;
@@ -719,6 +783,128 @@ h6{
     color: #1F2230;
 }
 
+.upcoming-auction-section{
+    margin-top: 80px;
+}
+
+.upcoming-auction-section .upcoming-auction-header{
+    display: flex;
+    margin-inline: auto;
+    flex-direction: column;
+    max-width: 768px;
+    text-align: center;
+}
+
+.upcoming-auction-section .upcoming-auction-header>h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1f2230;
+    margin-top: -5px;
+}
+
+.upcoming-auction-section .upcoming-auction-header>p{
+    color: #696969;
+}
+
+.upcoming-auction-products-section{
+    margin-top: 40px;
+}
+
+.upcoming-auction-card .product-img-container{
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.upcoming-auction-card .auction-time-countdown{
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    background: #1f2230;
+    min-width: 220px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.upcoming-auction-card .auction-time-countdown .countdown_row{
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center;
+}
+
+.upcoming-auction-card .auction-time-countdown .countdown-section{
+    display: block;
+    float: left;
+    font-size: 75%;
+    text-align: center;
+    border: 1.5px solid #696969;
+    border-radius: 10px 0;
+    padding: 10px 5px;
+    margin: 0px 5px;
+    transition: all 0.5s ease;
+    width: calc(25% - 10px);
+}
+
+.upcoming-auction-card .author-area2{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upcoming-auction-card .author-area2 .author-name{
+    background: #fff;
+    padding: 6px 44px 8px 20px;
+    border-radius: 33px;
+    margin-right: -28px;
+    transform: scaleX(0.1);
+    transform-origin: right;
+    transition: 0.6s ease;
+}
+
+.upcoming-auction-card .author-area2 .author-emo {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid transparent;
+    z-index: 1;
+}
+
+.upcoming-auction-card .author-area2 .author-emo img {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.55s ease-in-out;
+}
+
+.upcoming-auction-card .author-area2:hover .author-name {
+    transform: scaleX(1);
+}
+
+.upcoming-auction-card .author-area2:hover .author-emo {
+    border: 1px solid transparent;
+}
+
+
+.upcoming-auction-product-content h4{
+    font-size: calc(1.275rem + .3vw);
+    font-weight: 600;
+}
+
 @media (width >= 767px) {
     .hero-main-text>h1{
         font-size: 75px;
@@ -841,7 +1027,9 @@ h6{
         padding-inline: 3rem;
     }
 
-   
+    .cta-section, .upcoming-auction-section{
+        margin-top: 100px;
+    }
 }
 
 @media (width >= 1200px) {
@@ -851,6 +1039,11 @@ h6{
 
     .product-banner-item{
         padding: 10px 20px 10px 50px;
+    }
+
+    .upcoming-auction-card .auction-time-countdown .countdown-section{
+        padding: 8px 3px;
+       
     }
     
 }

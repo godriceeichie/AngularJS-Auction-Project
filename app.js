@@ -44,7 +44,7 @@ angularModule.controller('NavbarController', ['$scope', function($scope){
 }])
 
 
-angularModule.controller('CountdownController', ['$scope', '$interval', function($scope, $interval){
+angularModule.controller('CountdownController', ['$scope', '$interval', '$timeout', function($scope, $interval, $timeout){
 
    
     $scope.countDownDate = new Date("Feb 16, 2024 00:00:00").getTime();
@@ -155,6 +155,34 @@ angularModule.controller('CountdownController', ['$scope', '$interval', function
     $scope.updateCountdown()
 
     $interval($scope.updateCountdown, 1000)
+
+    $timeout(function(){
+        const upcomingAuctionSwiper = new Swiper('.upcoming-auction-swiper', {
+            // Optional parameters
+            loop: true,
+          
+            spaceBetween: 24,
+          
+            slidesPerView: 3,
+          
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              hide: true
+            },
+        });
+    }, 2000)
 
 }])
 
