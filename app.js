@@ -158,31 +158,36 @@ angularModule.controller('CountdownController', ['$scope', '$interval', '$timeou
 
     $timeout(function(){
         const upcomingAuctionSwiper = new Swiper('.upcoming-auction-swiper', {
-            // Optional parameters
-            loop: true,
-          
+            // slidesPerView: 1,
+            speed: 1000,
             spaceBetween: 24,
-          
-            slidesPerView: 3,
-          
-            // If we need pagination
+            loop: true,
+            // loopedSlides: 3,
+            roundLengths: true,
             pagination: {
-              el: '.swiper-pagination',
+                el: ".swiper-pagination",
+                clickable: 'true',
             },
-          
-            // Navigation arrows
             navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-next-arrow',
+                prevEl: '.swiper-prev-arrow',
             },
-          
-            // And if we need scrollbar
-            scrollbar: {
-              el: '.swiper-scrollbar',
-              hide: true
-            },
+    
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+    
+            }
         });
-    }, 2000)
+       
+    }, 0)
 
 }])
 
