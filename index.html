@@ -45,10 +45,10 @@
         </span>
 
         <a href="" class="username-link">Enter username</a>
-        <div ng-include="'hamburger.html'" class="{{hamburgerClass}}"></div>
+        <div ng-include="'./components/hamburger.html'" class="{{hamburgerClass}}"></div>
     </header>
     <main>
-        <section class="hero-container" ng-include="'hero.html'"></section>
+        <section class="hero-container" ng-include="'./components/hero.html'"></section>
         <div class="swiper hero-swiper" style="width: 80%;">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -141,9 +141,9 @@
             <!-- If we need scrollbar -->
             <!-- <div class="swiper-scrollbar"></div> -->
         </div>
-        <section ng-include="'liveAuction.html'" ng-controller="CountdownController" class="live-auction-section"></section>
-        <section ng-include="'cta.html'" class="cta-section" ng-controller="CountdownController"></section>
-        <section class="upcoming-auction-section" ng-include="'upcomingAuction.html'">
+        <section ng-include="'./components/liveAuction.html'" ng-controller="CountdownController" class="live-auction-section"></section>
+        <section ng-include="'./components/cta.html'" class="cta-section" ng-controller="CountdownController"></section>
+        <section class="upcoming-auction-section" ng-include="'./components/upcomingAuction.html'">
             
         </section>
         <section class="upcoming-auction-products-section" ng-controller="CountdownController">
@@ -258,7 +258,8 @@
                
             </div>
         </section>
-        <p>Red</p>
+        <footer ng-include="'./components/footer.html'"></footer>
+        <!-- <p>Red</p> -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="carousel.js"></script>

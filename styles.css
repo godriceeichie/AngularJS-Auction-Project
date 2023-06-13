@@ -33,9 +33,21 @@ h5,
 h6{
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: .5rem;
     margin-top: 0;
 }
+
+.d-flex{
+    display: flex !important;
+}
+
+.justify-content-center{
+    justify-content: center !important;
+}
+
+.justify-content-end{
+    justify-content: end !important;
+}
+
 .topbar{
     background-color: #f5f5f5;
     display: none;
@@ -49,6 +61,11 @@ h6{
 }
 
 .visitor-count{
+    display: flex;
+    align-items: center;
+}
+
+.logo-container{
     display: flex;
     align-items: center;
 }
@@ -984,6 +1001,143 @@ h6{
     
 }
 
+footer{
+    background-color: #0a0a0f;
+    background-image: url(images/footer-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-top: 5rem;
+}
+
+footer .footer-top{
+    padding-block: 60px ;
+}
+ 
+.footer-wrapper{
+    width: 100%;
+    padding-inline: .75rem;
+    margin-inline: auto;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 1;
+    gap: 4rem;
+}
+
+/*.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -48px;
+    margin-inline: -12px;
+
+} */
+
+/* .footer-container>*{
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 3rem;
+    padding-inline: 12px;
+} */
+/* 
+footer .footer-item {
+    min-width: 200px;
+} */
+
+footer .footer-item .footer-logo{
+    margin-bottom: 1rem;
+    color: #32c36c;
+}
+
+footer .footer-item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #d2d2d2;
+    margin-bottom: 25px;
+    /* width: 50%; */
+}
+
+footer .footer-item .footer-input-container{
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid #696969;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+}
+
+
+footer .footer-item .footer-input-container input {
+    width: 100%;
+    border-radius: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    transition: all 0.4s ease;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+footer .footer-item .footer-input-container button {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    min-width: 46px;
+    min-height: 44px;
+    color: #fff;
+    background-color: #32c36c;
+}
+
+footer .footer-item h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.footer-nav ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 0;
+    transition: all 0.4s ease-in;
+    color: #fff;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav ul li:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    background: #32c36c;
+    /* opacity: 0; */
+    transition: all 0.4s ease;
+    /* margin-right: 5rem; */
+}
+
+.footer-nav ul li a {
+    color: #d2d2d2;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+
+}
+
 @media (width >= 767px) {
     .hero-main-text>h1{
         font-size: 75px;
@@ -1005,7 +1159,13 @@ h6{
         padding: 14px 45px;
     }
     
-    
+    footer .footer-top{
+        padding-block: 80px ;
+    }
+
+    .footer-wrapper{
+        max-width: 720px;
+    }
 }
 
 /* Tablet view upwards */
@@ -1072,6 +1232,34 @@ h6{
     .upcoming-auction-swiper .swiper-pagination .swiper-pagination-bullet-active{
         display: inline-block;
     }
+
+    footer .footer-top{
+        padding-block: 90px ;
+    }
+
+    .footer-wrapper{
+        max-width: 960px;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+    
+    .footer-container>section{
+        /* flex: 0 0 auto; */
+        justify-content: center;
+        /* width: 25%; */
+    }
+
 }
 
 @media (width >= 1100px){
@@ -1141,4 +1329,8 @@ h6{
        
     }
     
+    .footer-wrapper{
+        max-width: 1140px;
+    }
+
 }
