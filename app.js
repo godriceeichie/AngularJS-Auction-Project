@@ -1,10 +1,36 @@
-const angularModule = angular.module('angularModule', [])
+const angularModule = angular.module('angularModule', ['ngRoute'])
+
+angularModule.config(['$routeProvider', function($routeProvider){
+    $routeProvider
+        .when('/', {
+            templateUrl: './views/home.html'
+        })
+        .when('/contact', {
+            templateUrl: './views/contact.html'
+        })
+        .when('/gallery', {
+            templateUrl: './views/gallery.html'
+        })
+        .when('/about', {
+            templateUrl: './views/about.html'
+        })
+        .otherwise({ redirectTo: '/'});
+}])
 
 
-angularModule.controller('NavbarController', ['$scope', function($scope){
-    $scope.message = "Hey World!"
+angularModule.controller('NavbarController', ['$scope', '$location', '$route', function($scope, $location){
+    $scope.url = $location.path()
     $scope.date = new Date("2023-07-02")
-    
+
+    $scope.currentPath = ''
+    $scope.$on('$routeChangeSuccess', function() {
+        $scope.currentPath = $location.path();
+        console.log($scope.currentPath, typeof $scope.currentPath); // Outputs the updated current path whenever it changes
+    });
+
+    $scope.isActive = function(route) {
+        return $scope.currentPath === route;
+    };
 
     $scope.isHamburgerOpen = false
     $scope.count = 0
@@ -24,18 +50,22 @@ angularModule.controller('NavbarController', ['$scope', function($scope){
 
     $scope.navLinks = [
         {
+            id: 1,
             name: 'Home',
             style: 'home'
         },
         {
+            id: 2,
             name: 'Gallery',
             style: ''
         },
         {
+            id: 3,
             name: 'About Us',
             style: ''
         },
         {
+            id: 4,
             name: 'Contact Us',
             style: ''
         }
@@ -201,9 +231,70 @@ angularModule.controller('CountdownController', ['$scope', '$interval', '$timeou
     
             }
         });
-       
+
+        const heroSwiper = new Swiper('.hero-swiper', {
+            autoplay: {
+              delay: 2000,
+              disableOnInteraction: false,
+            },
+            loop: true,
+          
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            slidesPerView: 5,
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+        
+            spaceBetween: 10,
+        
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+        
+              767: {
+                slidesPerView: 3,
+                spaceBetween: 15
+              },
+              1100: {
+                slidesPerView: 5,
+                spaceBetween: 10
+              }
+            },
+        
+            transition: {
+              name: 'carousel-animation',
+              duration: 300,
+              easing: 'ease-in-out'
+            },
+        
+            scrollbar: {
+              el: '.swiper-scollbar',
+              hide: true
+            },
+            on: {
+              
+            }
+        })
+        
+        heroSwiper.autoplay.start()
+        
     }, 0)
 
+       
+
+
+
+        
 }])
 
 // angularModule.controller('ParentController', ['$scope', function($scope){

@@ -117,6 +117,10 @@ h6{
     transition: 0.4s;
 }
 
+.navbar-list-item>a.active{
+    color: #32c36c;
+}
+
 .navbar-list-item>a:hover{
     color: #32c36c;
 }
