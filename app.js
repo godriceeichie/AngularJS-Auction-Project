@@ -41,6 +41,21 @@ angularModule.controller('NavbarController', ['$scope', function($scope){
         }
     ]
 
+    $scope.username = 'Godrice'
+    
+    $scope.formData = {}
+    $scope.isUsernameModalOpen = false
+
+    $scope.openUsernameModal = function(){
+        $scope.isUsernameModalOpen = !$scope.isUsernameModalOpen
+
+    }
+
+    $scope.addUsername = function(){
+        $scope.username = $scope.formData.username
+        return false
+    }
+
 }])
 
 
@@ -191,4 +206,14 @@ angularModule.controller('CountdownController', ['$scope', '$interval', '$timeou
 
 }])
 
+// angularModule.controller('ParentController', ['$scope', function($scope){
+//     $scope.usernameModalClass = ''
+//     $scope.isUsernameModalOpen = false
+//     $scope.count = 0
 
+//     $scope.openUsernameModal = function(){
+//         $scope.isUsernameModalOpen = !$scope.isUsernameModalOpen
+//         $scope.usernameModalClass = 'username-modal-section'
+//         $scope.count++
+//     }
+// }])

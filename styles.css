@@ -132,6 +132,7 @@ h6{
     color: white;
     border-radius: 2rem;
     display: none;
+    cursor: pointer;
 }
 
 .hamburger-menu-container{
@@ -1137,6 +1138,129 @@ footer .footer-item h5 {
     align-items: center;
     padding-left: 20px;
 
+}
+
+.username-modal-container{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 100%;
+    z-index: 201;
+    pointer-events: none;
+    padding: 5vh 5vw;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.username-modal-section{
+    outline: 0px;
+    display: block;
+    text-decoration: none;
+    color: rgb(193, 194, 197);
+    background-color: rgb(26, 27, 30);
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0.0625rem 0.1875rem, rgba(0, 0, 0, 0.05) 0px 2.25rem 1.75rem -0.4375rem, rgba(0, 0, 0, 0.04) 0px 1.0625rem 1.0625rem -0.4375rem;
+    pointer-events: all;
+    flex: 0 0 27.5rem;
+    max-width: 100%;
+    max-height: calc(90vh);
+    overflow-y: auto;
+    transition-property: transform, opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+    transform-origin: center center;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.username-modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem calc(0.6875rem) 1rem 1rem;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(26, 27, 30);
+    z-index: 1000;
+}
+
+.username-modal-header>h2{
+    line-height: 1;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #32c36c
+}
+
+.username-modal-header>button{
+    font-size: 1rem;
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    border-radius: 0.25rem;
+    padding: 0px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.375rem;
+    min-height: 1.375rem;
+    width: 1.375rem;
+    min-width: 1.375rem;
+    border: 0.0625rem solid transparent;
+    background-color: transparent;
+    color: rgb(233, 236, 239);
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+.username-modal-section>form{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.username-modal-section>form input{
+    height: 2.25rem;
+    line-height: calc(2.125rem);
+    resize: none;
+    font-size: 0.875rem;
+    width: 100%;
+    color: rgb(193, 194, 197);
+    display: block;
+    text-align: left;
+    border: 0.0625rem solid rgb(55, 58, 64);
+    background-color: rgb(37, 38, 43);
+    transition: border-color 100ms ease 0s;
+    min-height: 2.25rem;
+    padding-left: calc(0.75rem);
+    padding-right: calc(0.75rem);
+    border-radius: 0.25rem;
+}
+
+.username-modal-section>form button{
+    display: inline-block;
+    width: 100%;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    position: relative;
+    line-height: 1;
+    font-size: 0.875rem;
+    user-select: none;
+    cursor: pointer;
+    border: 0.0625rem solid transparent;
+    background-color: #32c36c;
+    color: rgb(255, 255, 255);
+    padding: .5rem;
 }
 
 @media (width >= 767px) {
