@@ -1338,6 +1338,163 @@ footer .footer-item h5 {
     font-size: 20px;
 }
 
+.who-we-are-section{
+    margin-block: 80px;
+    position: relative;
+}
+
+.who-we-are-container{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    flex-wrap: wrap;
+    max-width: 1320px;
+}
+
+.why-choose-us-section{
+    margin-top: 80px;
+}
+
+.why-choose-us-container{
+    display: flex;
+    margin-inline: auto;
+    position: relative;
+}
+
+.why-choose-us{
+    width: 100%;
+    padding-inline: .75rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.why-choose-us>img{
+    display: none;
+}
+
+.why-choose-us>header{
+    display: flex;
+    justify-content: center;
+       flex-wrap: wrap;
+}
+
+.why-choose-us>header>.header-container{
+    flex-shrink: 0;
+    padding-inline: 12px;
+    max-width: 100%;
+}
+
+.why-choose-us>header>.header-container>.header-title{
+    text-align: center;
+}
+
+.why-choose-us>header>.header-container>.header-title h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1f2230;
+    margin-top: -5px;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
+
+.why-choose-us>header>.header-container>.header-title p{
+    font-size: 16px;
+    /* font-weight: 500; */
+    color: #696969;
+    margin-bottom: 60px;
+}
+
+
+.why-choose-us main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-container{
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    padding-inline: 12px;
+}
+
+.feature{
+    border: 1px solid #eeeeee;
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    transition: all 0.42s ease;
+    z-index: 1;
+}
+
+.feature:hover{
+    box-shadow: 5px 2px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid transparent;
+}
+
+.feature:before{
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background: #32c36c;
+    transition: all 0.52s;
+    z-index: -1;
+}
+
+.feature:hover::before {
+    width: 100%;
+}
+
+.feature .sn{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(31, 34, 48, 0.1);
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(31, 34, 48, 0.1);
+    line-height: 1;
+    transition: all 0.42s ease;
+}
+
+.feature:hover .sn {
+    -webkit-text-stroke-color: #1f2230;
+}
+
+.feature .content h5{
+    font-size: 26px;
+    font-weight: 600;
+    color: #1f2230;
+    transition: all 0.42s ease-in;
+    cursor: unset;
+    margin-bottom: .5rem;
+    line-height: 1.2    ;
+}
+
+.feature .content p{
+    color: #696969;
+    margin-bottom: 1rem;
+}
+
+@media (width >= 576px){
+    .why-choose-us{
+        max-width: 540px;
+    }
+
+    .feature-container{
+        flex: 0 0 auto;
+        width: 83.33%;
+    }
+}
+
 @media (width >= 767px) {
     .hero-main-text>h1{
         font-size: 75px;
@@ -1374,6 +1531,26 @@ footer .footer-item h5 {
     .about-hero-text-container>.title{
         font-size: 50px;
     }
+
+    .why-choose-us{
+        max-width: 720px;
+    }
+
+    .why-choose-us>header>.header-container{
+        width: 83.33%;
+        flex: 0 0 auto;
+    }
+    
+    .feature-container{
+        width: 50%;
+    }
+
+    .why-choose-us>img{
+        position: absolute;
+        left: -20px;
+        top: 130px;
+    }
+
 }
 
 /* Tablet view upwards */
@@ -1472,7 +1649,38 @@ footer .footer-item h5 {
         max-width: 960px;
     }
 
+    .who-we-are-section{
+        margin-block: 120px;
+    }
+
+    .why-choose-us{
+        max-width: 960px;
+    }
+
+
+    .why-choose-us>header>.header-container{
+        width: 66.66%;
+        flex: 0 0 auto;
+    }
+
+    .feature-container{
+        width: 33.3%;
+    }
+
+    
 }
+
+@media (width >= 1024px){
+    .who-we-are-container{
+        flex-wrap: nowrap;
+    }
+
+    .why-choose-us-section{
+        margin-top: 100px;
+    }
+    
+}
+
 
 @media (width >= 1100px){
 
@@ -1549,5 +1757,14 @@ footer .footer-item h5 {
         max-width: 1140px;
     }
 
+    .why-choose-us>header>.header-container{
+        width: 50%;
+        flex: 0 0 auto;
+    }
+    
+
+    .why-choose-us{
+        max-width: 1140px;
+    }
 
 }
