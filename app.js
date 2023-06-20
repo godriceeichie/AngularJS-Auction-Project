@@ -297,14 +297,38 @@ angularModule.controller('CountdownController', ['$scope', '$interval', '$timeou
         
 }])
 
-// angularModule.controller('ParentController', ['$scope', function($scope){
-//     $scope.usernameModalClass = ''
-//     $scope.isUsernameModalOpen = false
-//     $scope.count = 0
-
-//     $scope.openUsernameModal = function(){
-//         $scope.isUsernameModalOpen = !$scope.isUsernameModalOpen
-//         $scope.usernameModalClass = 'username-modal-section'
-//         $scope.count++
-//     }
-// }])
+angularModule.controller('TestimonialController', ['$scope', '$timeout', function($scope, $timeout){
+    $timeout(function(){
+        var swiper = new Swiper(".testimonial-swiper", {
+            slidesPerView: 1,
+            speed: 1000,
+            spaceBetween: 24,
+            loop: true,
+            roundLengths: true,
+            navigation: {
+              nextEl: '.testimonial-button-next',
+              prevEl: '.testimonial-button-prev',
+            },
+        
+            breakpoints: {
+              280: {
+                slidesPerView: 1
+              },
+              480: {
+                slidesPerView: 1,
+                autoplay: true,
+              },
+              768: {
+                slidesPerView: 1
+              },
+              992: {
+                slidesPerView: 2
+              },
+              1200: {
+                slidesPerView: 3
+              },
+        
+            }
+        })
+    }, 0)
+}])
