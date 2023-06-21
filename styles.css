@@ -2128,7 +2128,9 @@ footer .footer-item h5 {
         flex: 0 0 auto;
         width: 50%;
     }
+
 /* gallery page */
+
 .products-container{
     display: flex;
     align-items: center;
@@ -2140,7 +2142,7 @@ footer .footer-item h5 {
 .top-products{
     display: flex;
     justify-content: space-between;
-
+    padding-left: 8%;
 }
 .products-filter{
     padding: 10px 10px;
@@ -2157,11 +2159,54 @@ footer .footer-item h5 {
 .product-card .live-auction-card, .upcoming-auction-card{
     width: 100%;
 }
-.live-auction-products-grid{
+.products-grid{
+    padding-left: 8%;
+}
+.product-card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 1.5rem;
     gap: 30px;
-    width: 80%;
+    width: 90%;
+}
+.products-filter-side{
+    display: flex;
+    flex-direction: column;
+    padding-right: 8%;
+}
+.products-search{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 1px 1px 20px 10px rgb(246,246,246);
+    padding: 20px;
+    
+}
+.products-search h2{
+    font-weight: 700;
+    width: max-content;
+    border-radius:5px ;
+    border-bottom: 3px solid rgb(50,195,108);
+}
+.search-bar{
+    display: flex;
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+.search-bar input{
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+.search-bar input::placeholder{
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Saira', sans-serif;
+}
+.search-bar p{
+    background-color: rgb(50,195,108);
+    padding: 10px 20px;
+    color: white;
 }
 }
