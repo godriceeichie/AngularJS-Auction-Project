@@ -117,7 +117,7 @@ h6{
     transition: 0.4s;
 }
 
-.navbar-list-item>a.active{
+.navbar-list-item>a.active, .mobile-navbar-list-item>a.active{
     color: #32c36c;
 }
 
@@ -1124,6 +1124,10 @@ footer .footer-item h5 {
 
 }
 
+.username-modal-wrapper{
+    display: none;
+}
+
 .username-modal-container{
     position: fixed;
     width: 100%;
@@ -2040,6 +2044,9 @@ footer .footer-item h5 {
     .stat{
         flex: 0 0 auto;
         width: 25%;
+    }
+    .username-modal-wrapper{
+        display: block;
     }
     
 }

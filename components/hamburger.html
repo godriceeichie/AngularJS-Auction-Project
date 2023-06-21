@@ -16,9 +16,29 @@
     </header>
     <nav >
         <ul class="mobile-navbar-list-container">
-            <li class="mobile-navbar-list-item" ng-repeat="link in navLinks track by link.id">
+            <!-- <li class="mobile-navbar-list-item" ng-repeat="link in navLinks track by link.id">
                 <a href="" class="{{link.style}}">
                     {{link.name}}
+                </a>
+            </li> -->
+            <li class="mobile-navbar-list-item" >
+                <a href="/" ng-class="{'active': isActive('/')}">
+                    Home
+                </a>
+            </li>
+            <li class="mobile-navbar-list-item" >
+                <a href="#!gallery" ng-class="{'active': isActive('/gallery')}">
+                    Gallery
+                </a>
+            </li>
+            <li class="mobile-navbar-list-item" >
+                <a href="#!contact" ng-class="{'active': isActive('/contact')}">
+                    Contact Us
+                </a>
+            </li>
+            <li class="mobile-navbar-list-item" >
+                <a href="#!about" ng-class="{'active': isActive('/about')}">
+                    About Us
                 </a>
             </li>
         </ul>
