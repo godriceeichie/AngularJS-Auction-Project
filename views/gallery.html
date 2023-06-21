@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Gallery</h1>
+    <div class="inner-banner">
+        <div class="about-hero-text-container">
+            <h2 class="title">Shop</h2>
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/"> Home </a>
+                    </li>
+                    <li class="active">
+                        Shop
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="why-choose-us-section" ng-controller="CountdownController" ng-include="'../components/Products.html'"></section>
 </body>
 </html>
