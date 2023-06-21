@@ -117,7 +117,7 @@ h6{
     transition: 0.4s;
 }
 
-.navbar-list-item>a.active{
+.navbar-list-item>a.active, .mobile-navbar-list-item>a.active{
     color: #32c36c;
 }
 
@@ -1124,6 +1124,10 @@ footer .footer-item h5 {
 
 }
 
+.username-modal-wrapper{
+    display: none;
+}
+
 .username-modal-container{
     position: fixed;
     width: 100%;
@@ -1716,10 +1720,12 @@ footer .footer-item h5 {
     padding: 10px;
 }
 
+
 .stats-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .stats-container>*{
@@ -1757,6 +1763,32 @@ footer .footer-item h5 {
 
 .single-stat:hover::before{
     width: 100%;
+}
+
+.single-stat .counter-icon{
+    margin-right: 15px;
+}
+
+.single-stat .countdown{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.single-stat .countdown h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #1f2230;
+    position: relative;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.single-stat .countdown p {
+    margin-bottom: 0px;
+    font-weight: 500;
+    color: #696969;
+    font-size: 16px;
 }
 
 @keyframes fluid {
@@ -2012,6 +2044,9 @@ footer .footer-item h5 {
     .stat{
         flex: 0 0 auto;
         width: 25%;
+    }
+    .username-modal-wrapper{
+        display: block;
     }
     
 }
