@@ -1799,7 +1799,38 @@ footer .footer-item h5 {
     font-family: 'Saira', sans-serif;
     font-weight: 600;
 }
-
+.contact-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.row{
+    display: flex;
+    gap: 20px;
+}
+.row input{
+    padding: 15px;
+    border: 1px solid rgb(193, 194, 197);
+    outline: none;
+}
+.row input::placeholder, .text-box::placeholder{
+    font-family: 'Saira';
+}
+.text-box{
+    padding-bottom: 400px;
+    padding-top: 20px;
+    width: 80%;
+    padding-left: 20px;
+    border: 1px solid rgb(193, 194, 197);
+    outline: none;
+}
 @keyframes fluid {
     0% {
         transform: translateY(0%);
@@ -2323,4 +2354,31 @@ form{
     border: 1px solid rgb(193, 194, 197);
     outline: none;
 }
+}
+@media (width <= 868px){
+    .contact-form{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .row{
+        display: flex;
+        gap: 20px;
+    }
+    .row input{
+        padding: 15px;
+        border: 1px solid rgb(193, 194, 197);
+        outline: none;
+    }
+    
+    .text-box{
+        padding-bottom: 200px;
+    }
 }
